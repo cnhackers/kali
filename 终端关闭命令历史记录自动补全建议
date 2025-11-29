@@ -2,9 +2,26 @@ nano .zshrc
 
 在文件的底部，注释掉这些行：
 
+找到自动补全配置，看起来像下面的代码
+
+# enable auto-suggestions based on the history
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    # change suggestion color
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+fi
+
+注释掉整个 if 块来禁用自动补全功能。我们注释掉而不是删除，这样如果想重新启用，还可以。代码应该像下面这样
+
 # enable auto-suggestions based on the history
 #if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 #    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #    # change suggestion color
-#    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+#    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 #fi
+
+关闭并重新打开你的终端
+
+或者运行下面的命令，用一个新的 shell 替换当前的 shell
+
+exec zsh
