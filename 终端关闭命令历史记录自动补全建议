@@ -25,3 +25,11 @@ fi
 或者运行下面的命令，用一个新的 shell 替换当前的 shell
 
 exec zsh
+
+还有一个更简单的方法：
+
+编辑 ~/.zshrc
+
+注释掉这行：
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
