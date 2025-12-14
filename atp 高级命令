@@ -1,3 +1,4 @@
 apt search <<package name>>
 apt show <<package name>>
 apt policy <<package name>>
+apt show  <<package name>>
